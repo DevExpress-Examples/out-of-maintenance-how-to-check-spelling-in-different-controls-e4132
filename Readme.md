@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
+* [InheritedControls.cs](./CS/InheritedControls.cs) (VB: [InheritedControls.vb](./VB/InheritedControls.vb))
+* [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb))
+* [SpellCheckerRegistrationHelper.cs](./CS/SpellCheckerRegistrationHelper.cs) (VB: [SpellCheckerRegistrationHelper.vb](./VB/SpellCheckerRegistrationHelper.vb))
+<!-- default file list end -->
 # How to check spelling in different controls
 
 
