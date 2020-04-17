@@ -1,6 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
-Namespace SpellCheckerInheritedControls
+﻿Namespace SpellCheckerInheritedControls
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -55,7 +53,8 @@ Namespace SpellCheckerInheritedControls
 			Me.spellChecker1.CheckAsYouTypeOptions.CheckControlsInParentContainer = True
 			Me.spellChecker1.Culture = New System.Globalization.CultureInfo("en-US")
 			Me.spellChecker1.ParentContainer = Me
-'			Me.spellChecker1.SpellingFormShowing += New DevExpress.XtraSpellChecker.SpellingFormShowingEventHandler(Me.spellChecker1_SpellingFormShowing);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.spellChecker1.SpellingFormShowing += new DevExpress.XtraSpellChecker.SpellingFormShowingEventHandler(this.spellChecker1_SpellingFormShowing);
 			' 
 			' label1
 			' 
@@ -74,7 +73,8 @@ Namespace SpellCheckerInheritedControls
 			Me.button1.TabIndex = 3
 			Me.button1.Text = "Check spelling in active control"
 			Me.button1.UseVisualStyleBackColor = True
-'			Me.button1.Click += New System.EventHandler(Me.button1_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.button1.Click += new System.EventHandler(this.button1_Click);
 			' 
 			' label2
 			' 
@@ -120,7 +120,8 @@ Namespace SpellCheckerInheritedControls
 			Me.memoExEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() { New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
 			Me.memoExEdit1.Size = New System.Drawing.Size(197, 22)
 			Me.memoExEdit1.TabIndex = 12
-'			Me.memoExEdit1.Popup += New System.EventHandler(Me.memoExEdit1_Popup);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.memoExEdit1.Popup += new System.EventHandler(this.memoExEdit1_Popup);
 			' 
 			' buttonEdit1
 			' 
