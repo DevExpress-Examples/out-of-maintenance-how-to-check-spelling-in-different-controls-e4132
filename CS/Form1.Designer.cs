@@ -168,7 +168,7 @@ namespace SpellCheckerInheritedControls {
             this.richEditControl1.SpellChecker = this.spellChecker1;
             this.richEditControl1.TabIndex = 10;
             this.richEditControl1.Text = "teest";
-            this.richEditControl1.Views.SimpleView.Padding = new System.Windows.Forms.Padding(0);
+            this.richEditControl1.Views.SimpleView.Padding = new DevExpress.Portable.PortablePadding(0);
             // 
             // richTextBox1
             // 

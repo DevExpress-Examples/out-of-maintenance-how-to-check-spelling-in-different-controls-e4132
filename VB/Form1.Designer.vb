@@ -167,7 +167,7 @@ Namespace SpellCheckerInheritedControls
 			Me.richEditControl1.SpellChecker = Me.spellChecker1
 			Me.richEditControl1.TabIndex = 10
 			Me.richEditControl1.Text = "teest"
-			Me.richEditControl1.Views.SimpleView.Padding = New System.Windows.Forms.Padding(0)
+			Me.richEditControl1.Views.SimpleView.Padding = New DevExpress.Portable.PortablePadding(0)
 			' 
 			' richTextBox1
 			' 
