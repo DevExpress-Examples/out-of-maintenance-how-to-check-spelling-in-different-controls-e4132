@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.IO
 Imports System.Text
 Imports System.Windows.Forms
@@ -12,7 +11,9 @@ Imports DevExpress.XtraSpellChecker
 Namespace SpellCheckerInheritedControls
 	Partial Public Class Form1
 		Inherits Form
-		Private _activeControl As Control = Nothing
+
+'INSTANT VB NOTE: The field activeControl was renamed since Visual Basic does not allow fields to have the same name as other class members:
+		Private activeControl_Conflict As Control = Nothing
 
 		Public Sub New()
 			InitializeComponent()
@@ -43,15 +44,17 @@ Namespace SpellCheckerInheritedControls
 		End Sub
 
 		Private Sub editor_GotFocus(ByVal sender As Object, ByVal e As EventArgs)
-			_activeControl = CType(sender, Control)
+			activeControl_Conflict = DirectCast(sender, Control)
 		End Sub
 
 		Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
-			spellChecker1.Check(_activeControl)
+			If Not Me.button1.IsHandleCreated Then Return
+
+			spellChecker1.Check(activeControl_Conflict)
 		End Sub
 
 		Private Sub memoExEdit1_Popup(ByVal sender As Object, ByVal e As EventArgs) Handles memoExEdit1.Popup
-			Dim popup As IPopupControl = CType(sender, IPopupControl)
+			Dim popup As IPopupControl = DirectCast(sender, IPopupControl)
 
 			For i As Integer = 0 To popup.PopupWindow.Controls.Count - 1
 				Dim popupItem As Control = popup.PopupWindow.Controls(i)
@@ -65,7 +68,7 @@ Namespace SpellCheckerInheritedControls
 		End Sub
 
 		Private Sub spellChecker1_SpellingFormShowing(ByVal sender As Object, ByVal e As SpellingFormShowingEventArgs) Handles spellChecker1.SpellingFormShowing
-			e.Handled = (_activeControl Is memoExEdit1)
+			e.Handled = (activeControl_Conflict Is memoExEdit1)
 		End Sub
 	End Class
 End Namespace
